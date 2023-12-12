@@ -3,11 +3,7 @@
  * Copyright 2023 Easexun, Inc.
  * Licensed under the MIT license
  */
-body{
-  --global-background: rgba(251,251,253,0.8);
-}
-@media (prefers-color-scheme:dark) {
-  body{
-    --global-background: rgba(22,22,23,0.8);
-  }
-}
+
+#startrack {height: 140%; width: 100%;}
+.background {position: absolute; top: 0; left: 0; width: 100vw; height: 100vh;}
+.background .cover {position: absolute; bottom: -42%; left: 0; height: 100%; width: 100%; background: linear-gradient(0deg, #202020 30%, rgba(32, 32, 32, 0));}
