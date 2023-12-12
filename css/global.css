@@ -6,3 +6,4 @@
 
 * {padding: 0; margin: 0; transition-timing-function: cubic-bezier(.19, 1, .22, 1);}
 body, html {font-family: Microsoft YaHei; -webkit-font-smoothing: antialiased; color: var(--weui-FG-0); line-height: 1.5; min-width: 1150px; background-color: var(--weui-BG-0); font-size: 14px; overflow-x: hidden;}
+.home__container {width: 100vw; height: 100vh; background: var(--weui-BG-0); color: var(--weui-FG-0); -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; min-height: 575px; position: relative; overflow: hidden;}
