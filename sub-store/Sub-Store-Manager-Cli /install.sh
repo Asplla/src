@@ -17,7 +17,7 @@ GITHUB_REPO_OWNER="sub-store-org"
 GITHUB_REPO_NAME="Sub-Store-Manager-Cli"
 BINARY_NAME="ssm"  # 二进制文件名，不包含后缀
 BIN_DIRECTORY="/usr/local/bin"  # 安装到的目标目录
-RELEASE_TAG=$(curl -s "https://api.github.com/repos/${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}/releases/latest" | grep -o '"tag_name": "[^"]*' | cut -d'"' -f4)
+RELEASE_TAG=$(curl -s "https://api.kkgithub.com/repos/${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}/releases/latest" | grep -o '"tag_name": "[^"]*' | cut -d'"' -f4)
 
 # 根据操作系统类型和架构确定文件后缀
 SYS_OS=$(uname -s | tr '[:upper:]' '[:lower:]')
@@ -47,7 +47,7 @@ echo "检测系统环境为 ${OS} ${ARCH}..."
 echo "下载 ${BINARY_FILENAME}..."
 
 # 下载 GitHub Release 文件
-DOWNLOAD_URL="https://github.com/${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}/releases/download/${RELEASE_TAG}/${BINARY_FILENAME}"
+DOWNLOAD_URL="https://kkgithub.com/${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}/releases/download/${RELEASE_TAG}/${BINARY_FILENAME}"
 TMP_DIR=$(mktemp -d)
 curl -L -o "${TMP_DIR}/${BINARY_FILENAME}" "${DOWNLOAD_URL}"
 
